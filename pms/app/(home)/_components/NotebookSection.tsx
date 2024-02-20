@@ -4,25 +4,35 @@ import {
 	CardDescription,
 	CardTitle,
 } from '@/app/_components/ui/card'
-import { GhostButton } from './GhostButton'
 import Image from 'next/image'
 
+import WhatsappIcon from './WhatsappIcon'
+
+import { Button } from '@/app/_components/ui/button'
+
+import tabletImage from '../../../public/maintablet.png'
+import Link from 'next/link'
 export const NotebookSection = () => {
-	const tabletImage = require('../../../public/maintablet.png')
+	const whatsappLink =
+		'https://api.whatsapp.com/send?phone=5517991850473&text=Ol%C3%A1.%20Obrigado%20por%20entrar%20em%20contato.%20Aguarde%20que%20retornaremos%20assim%C2%A0que%C2%A0poss%C3%ADvel.'
 
 	return (
-		<section className="w-full h-[400px] bg-gradient-to-t from-[#061826] to-[#020B12]">
-			<div className="mx-auto w-[1260px] h-[300px] bg-notebook-section bg-cover rounded-[42px]">
-				<div className="bg-[#E7E7E7] w-full h-full rounded-[42px] bg-opacity-60">
+		<section className="w-full  bg-gradient-to-t from-[#061826] to-[#020B12]">
+			<div className="mx-auto  w-full w-max-[1260px] bg-notebook-section bg-cover rounded-[42px]">
+				<div className="bg-[#E7E7E7] w-full h-full rounded-[42px] bg-opacity-60 pb-5 ">
 					<div className="titleBox flex flex-col items-center gap-4">
-						<Image src={tabletImage} />
+						<Image
+							src={tabletImage}
+							alt="Table com sistema PMS"
+							className="-mt-[200px] w-2/3"
+						/>
 
 						<h2 className="text-5xl text-[#272727] font-bold">
 							PMS (Process Management System)
 						</h2>
 
-						<div className="cardContainer flex justify-center gap-4 p-5">
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+						<div className="cardContainer sm:flex sm:gap-3 md:flex md:justify-center gap-4 px-12">
+							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Único</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -31,7 +41,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Facilidade</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -40,7 +50,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Planejamento</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -49,7 +59,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Análises</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -60,7 +70,15 @@ export const NotebookSection = () => {
 							</Card>
 						</div>
 
-						<GhostButton className="mt-5" />
+						{/* <GhostButton className="mt-5" /> */}
+						<Link
+							href={whatsappLink}
+							passHref>
+							<Button className="mt-8 bg-[#282A2E] text-white flex gap-4 text-xl font-bold rounded-3xl py-6 px-10 shadow-lg transition-transform hover:bg-[#282A2E] hover:-translate-y-4">
+								<WhatsappIcon />
+								<h3>Entre em contato</h3>
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>
