@@ -21,7 +21,7 @@ export const GhostButton = ({ className }: GhostButtonProps) => {
 				onMouseEnter={() => setIconColor('#030D15')}
 				onMouseLeave={() => setIconColor('#fff')}
 				variant={'ghost'}
-				className="flex gap-3  text-xl font-bold rounded-3xl border-solid border-4 border-[#112843] py-6 px-10 shadow-lg transition-all"
+				className="flex gap-3  text-xl font-bold rounded-3xl border-solid border-4 border-[#112843] py-8 px-10 shadow-lg transition-all hover:-translate-y-5"
 				style={{ boxShadow: "0px 0px 25px 10px rgba('56, 95, 170, 0.9')" }}>
 				<WhatsappIcon fill={iconColor} />
 				Entre em contato

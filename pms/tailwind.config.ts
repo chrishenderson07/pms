@@ -55,6 +55,7 @@ const config = {
 			},
 			backgroundImage: () => ({
 				'notebook-section': "url('../public/bgnotebook.jpg')",
+				'carrousel-section': "url('../public/carroselbg.webp')",
 			}),
 			borderRadius: {
 				lg: 'var(--radius)',
