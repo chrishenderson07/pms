@@ -4,11 +4,14 @@ import {
 	CardDescription,
 	CardTitle,
 } from '@/app/_components/ui/card'
-import { GhostButton } from './GhostButton'
 import Image from 'next/image'
 
-import tabletImage2 from '../../../public/tablet2.webp'
+import { GhostButton } from './GhostButton'
 import { GhostCard } from './GhostCard'
+
+import tabletImage2 from '../../../public/tablet2.webp'
+import demandaIcon from '../../../public/icon/demanda.svg'
+import estabilidadeIcon from '../../../public/icon/estabilidade.svg'
 
 export const ModulesSection = () => {
 	return (
@@ -66,7 +69,16 @@ export const ModulesSection = () => {
 						src={tabletImage2}
 						alt="Tablet com o sistema PMS"
 					/>
-					<GhostCard />
+					<GhostCard
+						className="sm:absolute sm:-top-12 sm:-left-20"
+						imageSource={demandaIcon}
+						cardContent="Com o PMS, definir como deseja operar, demanda 	poucos cliques"
+					/>
+					<GhostCard
+						className="sm:absolute sm:-top-24 sm:right-10"
+						imageSource={estabilidadeIcon}
+						cardContent="Estabilidade = Eficiência Otimize e encontre o ponto de equilíbrio do seu processo e opere com estabilidade"
+					/>
 				</div>
 			</div>
 		</section>
