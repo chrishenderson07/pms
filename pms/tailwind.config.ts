@@ -57,6 +57,9 @@ const config = {
 				'notebook-section': "url('../public/bgnotebook.jpg')",
 				'carrousel-section': "url('../public/carroselbg.webp')",
 			}),
+			boxShadow: {
+				extraLarge: '0 0px 20px 0px rgba(56, 95, 170, 0.28)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
