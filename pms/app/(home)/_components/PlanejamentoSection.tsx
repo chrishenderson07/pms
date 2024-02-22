@@ -5,8 +5,8 @@ import telapms2 from '../../../public/tela-pms2.webp'
 
 export const PlanejamentoSection = () => {
 	return (
-		<section className="w-full bg-[#061826]">
-			<div className="notebook-container flex flex-col  gap-4 w-11/12 md:w-11/12 mx-auto mt-52 px-4 py-12 bg-[#E5E5E5] rounded-[42px] shadow-2xl">
+		<section className="w-full bg-[#061826] py-16">
+			<div className="notebook-container flex flex-col  gap-4 w-11/12 md:w-11/12 mx-auto px-4 py-12 bg-[#E5E5E5] rounded-[42px] shadow-2xl">
 				<div className="container flex flex-col items-center sm:flex-row gap-10">
 					<div className="content sm:w-1/2 flex flex-col gap-3">
 						<h2 className="font-bold text-[#112843] pl-3 text-2xl sm:text-3xl border-l-[3px] border-solid border-[#112843]">
@@ -41,8 +41,7 @@ export const PlanejamentoSection = () => {
 						</h2>
 						<p className="text-[#484545] text-md sm:text-xl">
 							O PMS roda dezenas de cenários em segundos, permitindo uma análise
-							rápida e visual do comportamento da receita total bruta, em função
-							de Mix de Produtos ou outras variáveis
+							rápida e visual.
 						</p>
 
 						<ul className="text-[#484545]  list-disc">
