@@ -12,10 +12,13 @@ import { GhostCard } from './GhostCard'
 import tabletImage2 from '../../../public/tablet2.webp'
 import demandaIcon from '../../../public/icon/demanda.svg'
 import estabilidadeIcon from '../../../public/icon/estabilidade.svg'
+import fluxoDeTrabalho from '../../../public/icon/fluxo-de-trabalho.svg'
+import economize from '../../../public/icon/economize-agua.svg'
+import processo from '../../../public/icon/processo.svg'
 
 export const ModulesSection = () => {
 	return (
-		<section className="w-full py-12 bg-[#061826] bg-cover">
+		<section className="w-full py-14 bg-[#061826]">
 			<h2 className="sm:text-5xl md:text-4xl text-3xl text-white font-bold text-center">
 				PMS - Módulo BME
 			</h2>
@@ -55,7 +58,7 @@ export const ModulesSection = () => {
 			</div>
 
 			{/* Seção com Notebook e cards flutuantes */}
-			<div className="notebook-container flex flex-col sm:flex-row items-center w-11/12 md:w-10/12 mx-auto mt-52 sm:pl-10 py-6 bg-[#020B12] rounded-[42px] shadow-extraLarge h-[400px]">
+			<div className="notebook-container flex flex-col sm:flex-row items-center w-11/12 md:w-10/12 mx-auto mt-52 sm:pl-10 py-6 bg-[#020B12] rounded-[42px] shadow-extraLarge ">
 				<div className="sm:w-2/5">
 					<h2 className="text-center sm:text-left text-white text-4xl font-bold">
 						Rodar BME nunca
@@ -64,20 +67,35 @@ export const ModulesSection = () => {
 					</h2>
 				</div>
 
-				<div className="sm:w-3/5 mt-8 sm:mt-0 relative">
+				<div className="sm:w-3/5 mt-8 sm:-mt-16 relative">
 					<Image
 						src={tabletImage2}
 						alt="Tablet com o sistema PMS"
 					/>
 					<GhostCard
 						className="sm:absolute sm:-top-12 sm:-left-20"
-						imageSource={demandaIcon}
-						cardContent="Com o PMS, definir como deseja operar, demanda 	poucos cliques"
+						imageSource={processo}
+						cardContent="No seu processo existem várias opções para operar?"
 					/>
 					<GhostCard
 						className="sm:absolute sm:-top-24 sm:right-10"
 						imageSource={estabilidadeIcon}
 						cardContent="Estabilidade = Eficiência Otimize e encontre o ponto de equilíbrio do seu processo e opere com estabilidade"
+					/>
+					<GhostCard
+						className="sm:absolute sm:bottom-52 sm:-left-24"
+						imageSource={demandaIcon}
+						cardContent="Com o PMS, definir como deseja operar, demanda poucos cliques"
+					/>
+					<GhostCard
+						className="sm:absolute sm:-bottom-12 sm:left-24"
+						imageSource={fluxoDeTrabalho}
+						cardContent="Se o seu processo é ou não capaz, com limites previamente definidos, o PMS irá te dizer"
+					/>
+					<GhostCard
+						className="sm:absolute sm:bottom-40 sm:-right-20"
+						imageSource={economize}
+						cardContent="Se o seu processo é ou não capaz, com limites previamente definidos, o PMS irá te dizer"
 					/>
 				</div>
 			</div>
