@@ -18,12 +18,14 @@ import processo from '../../../public/icon/processo.svg'
 
 export const ModulesSection = () => {
 	return (
-		<section className="w-full py-14 bg-[#061826]">
+		<section
+			id="bme"
+			className="w-full py-14 bg-[#061826]">
 			<h2 className="sm:text-5xl md:text-4xl text-3xl text-white font-bold text-center">
 				PMS - Módulo BME
 			</h2>
 			<div className="flex flex-col justify-center items-center pb-24">
-				<div className="cardContainer md:w-6/7  flex flex-col gap-3 sm:flex sm:flex-row sm:justify-center sm:gap-3 sm:px-14 px-6 mt-8">
+				<div className="cardContainer md:w-11/12 flex flex-col gap-3 md:flex-row sm:justify-center sm:gap-3  mt-8">
 					<Card className="bg-transparent md:w-1/4 pt-7 pb-2 px-0 text-center border-0">
 						<CardTitle className="mb-3 text-2xl">Customizado</CardTitle>
 						<CardContent className="text-sm">
@@ -57,46 +59,47 @@ export const ModulesSection = () => {
 				<GhostButton />
 			</div>
 
-			{/* Seção com Notebook e cards flutuantes */}
-			<div className="notebook-container flex flex-col sm:flex-row items-center w-11/12 md:w-10/12 mx-auto mt-52 sm:pl-10 py-6 bg-[#020B12] rounded-[42px] shadow-extraLarge ">
-				<div className="sm:w-2/5">
-					<h2 className="text-center sm:text-left text-white text-4xl font-bold">
+			<div className="notebook-container flex flex-col xl:flex-row items-center w-11/12 md:w-10/12 mx-auto lg:mt-52 sm:pl-10 py-6 px-4 bg-[#020B12] rounded-[42px] shadow-extraLarge ">
+				<div className="md:w-3/5 z-50">
+					<h2 className="text-center xl:text-left text-white text-4xl font-bold">
 						Rodar BME nunca
 						<br />
 						foi tão fácil
 					</h2>
 				</div>
 
-				<div className="sm:w-3/5 mt-8 sm:-mt-16 relative">
+				<div className=" flex flex-col items-center sm:w-5/5 mt-8 xl:-mt-16 relative">
 					<Image
 						src={tabletImage2}
 						alt="Tablet com o sistema PMS"
 					/>
-					<GhostCard
-						className="sm:absolute sm:-top-12 sm:-left-20"
-						imageSource={processo}
-						cardContent="No seu processo existem várias opções para operar?"
-					/>
-					<GhostCard
-						className="sm:absolute sm:-top-24 sm:right-10"
-						imageSource={estabilidadeIcon}
-						cardContent="Estabilidade = Eficiência Otimize e encontre o ponto de equilíbrio do seu processo e opere com estabilidade"
-					/>
-					<GhostCard
-						className="sm:absolute sm:bottom-52 sm:-left-24"
-						imageSource={demandaIcon}
-						cardContent="Com o PMS, definir como deseja operar, demanda poucos cliques"
-					/>
-					<GhostCard
-						className="sm:absolute sm:-bottom-12 sm:left-24"
-						imageSource={fluxoDeTrabalho}
-						cardContent="Se o seu processo é ou não capaz, com limites previamente definidos, o PMS irá te dizer"
-					/>
-					<GhostCard
-						className="sm:absolute sm:bottom-40 sm:-right-20"
-						imageSource={economize}
-						cardContent="Se o seu processo é ou não capaz, com limites previamente definidos, o PMS irá te dizer"
-					/>
+					<div className="grid md:grid-cols-2 md:items-stretch gap-4 ">
+						<GhostCard
+							className=" lg:absolute lg:-top-16 lg:-left-36 xl:-top-32 xl:-left-44"
+							imageSource={processo}
+							cardContent="No seu processo existem várias opções para operar?"
+						/>
+						<GhostCard
+							className=" lg:absolute lg:-top-4 lg:right-0 xl:-top-24 xl:right-0"
+							imageSource={estabilidadeIcon}
+							cardContent="Estabilidade = Eficiência Otimize e encontre o ponto de equilíbrio do seu processo e opere com estabilidade"
+						/>
+						<GhostCard
+							className=" lg:absolute lg:bottom-12 lg:-left-32 xl:bottom-52 xl:-left-52"
+							imageSource={demandaIcon}
+							cardContent="Com o PMS, definir como deseja operar, demanda poucos cliques"
+						/>
+						<GhostCard
+							className=" lg:absolute lg:-bottom-32 lg:-right-0 xl:-bottom-12 xl:-left-32"
+							imageSource={fluxoDeTrabalho}
+							cardContent="Se o seu processo é ou não capaz, com limites previamente definidos, o PMS irá te dizer"
+						/>
+						<GhostCard
+							className="lg:absolute lg:bottom-32 lg:-right-24 xl:bottom-4  xl:-right-12"
+							imageSource={economize}
+							cardContent="Veja onde estão seus principais consumidores de água através do Balanço Hídrico"
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -19,7 +19,7 @@ export const GhostCard = ({
 }: GhostCardProps) => {
 	return (
 		<div className={className}>
-			<Card className="w-[300px] bg-[rgba(16,20,24,0.57)] backdrop-blur-sm  rounded-3xl border-solid border-[#393939] border-[1px]">
+			<Card className=" h-full max-h-64   lg:w-[280px] bg-[rgba(16,20,24,0.57)] backdrop-blur-sm  rounded-3xl border-solid border-[#393939] border-[1px]">
 				<CardHeader>
 					<Image
 						src={imageSource}

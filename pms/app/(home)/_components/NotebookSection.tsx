@@ -20,19 +20,21 @@ export const NotebookSection = () => {
 		<section className="w-full bg-gradient-to-t from-[#061826] to-[#020B12]">
 			<div className="mx-auto  w-full w-max-[1260px] bg-notebook-section bg-cover rounded-[42px]">
 				<div className="bg-[#E7E7E7] w-full h-full rounded-[42px] bg-opacity-60 sm:pb-4 py-12">
-					<div className="titleBox flex flex-col items-center gap-4">
+					<div
+						id="sobre"
+						className="titleBox flex flex-col items-center gap-4">
 						<Image
 							src={tabletImage}
 							alt="Table com sistema PMS"
-							className="sm:-mt-[300px] -mt-[200px] sm:w-2/3 w-full -ml-4 sm:ml-0"
+							className="sm:-mt-[300px] -mt-[180px] sm:w-2/3 w-full -ml-4 sm:ml-0"
 						/>
 
 						<h2 className="sm:text-5xl md:text-4xl text-3xl text-[#272727] font-bold text-center">
 							PMS (Process Management System)
 						</h2>
 
-						<div className="cardContainer md:w-10/12 flex flex-col gap-3 sm:flex sm:flex-row sm:justify-center sm:gap-3 sm:px-14 px-6 mt-8">
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+						<div className="cardContainer w-11/12 md:w-11/12 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-1">
+							<Card className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Único</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -41,7 +43,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Facilidade</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -50,7 +52,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Planejamento</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -59,7 +61,7 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="bg-gradient-to-tr from-[#232528] to-[#3C4047]  md:w-1/4 pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Análises</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">

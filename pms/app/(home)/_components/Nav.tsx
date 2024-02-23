@@ -6,7 +6,7 @@ import Link from 'next/link'
 export function NavMenu() {
 	const logoImage = require('../../../public/logotipo.png')
 	return (
-		<nav className="flex items-center justify-between">
+		<nav className="sm:px-8 flex flex-col gap-4 md:flex-row items-center justify-between">
 			<Link href="/">
 				<Image
 					src={logoImage}
@@ -15,7 +15,7 @@ export function NavMenu() {
 					alt="Logotipo PMS"
 				/>
 			</Link>
-			<ul className="flex gap-8">
+			<ul className="flex gap-4 sm:gap-8">
 				<Link href="#sobre">Sobre</Link>
 				<Link href="#bme">BME</Link>
 				<Link href="#planejamento">Planejamento</Link>

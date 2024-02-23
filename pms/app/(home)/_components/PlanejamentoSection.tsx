@@ -5,7 +5,9 @@ import telapms2 from '../../../public/tela-pms2.webp'
 
 export const PlanejamentoSection = () => {
 	return (
-		<section className="w-full bg-[#061826] py-16">
+		<section
+			id="planejamento"
+			className="w-full bg-[#061826] py-16">
 			<div className="notebook-container flex flex-col  gap-4 w-11/12 md:w-11/12 mx-auto px-4 py-12 bg-[#E5E5E5] rounded-[42px] shadow-2xl">
 				<div className="container flex flex-col items-center sm:flex-row gap-10">
 					<div className="content sm:w-1/2 flex flex-col gap-3">
