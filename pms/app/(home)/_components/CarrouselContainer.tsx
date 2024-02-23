@@ -35,14 +35,14 @@ export const CarrouselContainer = () => {
 						className="rounded-xl"
 					/>
 				</CarouselItem>
-				<CarouselItem>
+				<CarouselItem className="flex justify-center">
 					<Image
 						src={logoUsinas}
 						alt="Logo Usinas Lins"
 						className="rounded-xl"
 					/>
 				</CarouselItem>
-				<CarouselItem>
+				<CarouselItem className="flex justify-center">
 					<Image
 						src={logoDomingos}
 						alt="Logo Usina São Domingos"

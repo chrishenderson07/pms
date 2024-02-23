@@ -9,7 +9,7 @@ export const TestimonialSection = () => {
 						Comprove a nossa excelência com nossas avaliações.
 					</h3>
 				</div>
-				<div className="testimonial flex-1">
+				<div className="testimonial flex-1 ">
 					<CarrouselContainer />
 				</div>
 			</div>
