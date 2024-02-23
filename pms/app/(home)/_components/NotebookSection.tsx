@@ -1,3 +1,9 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 import {
 	Card,
 	CardContent,
@@ -16,6 +22,25 @@ export const NotebookSection = () => {
 	const whatsappLink =
 		'https://api.whatsapp.com/send?phone=5517991850473&text=Ol%C3%A1.%20Obrigado%20por%20entrar%20em%20contato.%20Aguarde%20que%20retornaremos%20assim%C2%A0que%C2%A0poss%C3%ADvel.'
 
+	const elementoRef = useRef(null)
+
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger)
+
+		gsap.from(elementoRef.current, {
+			y: 100, // move o elemento para cima 100 pixels
+			duration: 1, // duração da animação
+			ease: 'power2.out', // curva de velocidade suave
+			scrollTrigger: {
+				trigger: elementoRef.current,
+				start: 'top bottom', // inicia a animação quando o topo do elemento atinge a parte de baixo da viewport
+				end: 'bottom top', // termina a animação quando o fim do elemento atinge o topo da viewport
+				scrub: true, // "raspa" a animação para que ela pareça mais suave enquanto você rola
+				markers: true, // opcional: adiciona marcadores para visualização durante o desenvolvimento
+			},
+		})
+	}, [])
+
 	return (
 		<section className="w-full bg-gradient-to-t from-[#061826] to-[#020B12]">
 			<div className="mx-auto  w-full w-max-[1260px] bg-notebook-section bg-cover rounded-[42px]">
@@ -24,9 +49,10 @@ export const NotebookSection = () => {
 						id="sobre"
 						className="titleBox flex flex-col items-center gap-4">
 						<Image
+							ref={elementoRef}
 							src={tabletImage}
 							alt="Table com sistema PMS"
-							className="sm:-mt-[300px] -mt-[180px] sm:w-2/3 w-full -ml-4 sm:ml-0"
+							className="notebookImage sm:-mt-[300px] -mt-[180px] sm:w-2/3 w-full -ml-4 sm:ml-0"
 						/>
 
 						<h2 className="sm:text-5xl md:text-4xl text-3xl text-[#272727] font-bold text-center">
