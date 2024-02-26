@@ -1,8 +1,7 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
+import UseFadeIn from '@/app/_hooks/UseFadeIn'
 
 import {
 	Card,
@@ -10,37 +9,27 @@ import {
 	CardDescription,
 	CardTitle,
 } from '@/app/_components/ui/card'
-import Image from 'next/image'
 
 import WhatsappIcon from './WhatsappIcon'
 
 import { Button } from '@/app/_components/ui/button'
 
-import tabletImage from '../../../public/maintablet.png'
 import Link from 'next/link'
+import { TabletMainImage } from './TabletMainImage'
 export const NotebookSection = () => {
 	const whatsappLink =
 		'https://api.whatsapp.com/send?phone=5517991850473&text=Ol%C3%A1.%20Obrigado%20por%20entrar%20em%20contato.%20Aguarde%20que%20retornaremos%20assim%C2%A0que%C2%A0poss%C3%ADvel.'
 
-	const elementoRef = useRef(null)
-
-	useEffect(() => {
-		gsap.registerPlugin(ScrollTrigger)
-
-		gsap.from(elementoRef.current, {
-			y: 100, // move o elemento para cima 100 pixels
-			duration: 1, // duração da animação
-			ease: 'power2.out', // curva de velocidade suave
-			scrollTrigger: {
-				trigger: elementoRef.current,
-				start: 'top bottom', // inicia a animação quando o topo do elemento atinge a parte de baixo da viewport
-				end: 'bottom top', // termina a animação quando o fim do elemento atinge o topo da viewport
-				scrub: true, // "raspa" a animação para que ela pareça mais suave enquanto você rola
-				markers: true, // opcional: adiciona marcadores para visualização durante o desenvolvimento
-			},
-		})
-	}, [])
-
+	const cardRef = {
+		card1: useRef(null),
+		card2: useRef(null),
+		card3: useRef(null),
+		card4: useRef(null),
+	}
+	UseFadeIn(cardRef.card1, 100, 1)
+	UseFadeIn(cardRef.card2, 100, 1.5)
+	UseFadeIn(cardRef.card3, 100, 2)
+	UseFadeIn(cardRef.card4, 100, 2.5)
 	return (
 		<section className="w-full bg-gradient-to-t from-[#061826] to-[#020B12]">
 			<div className="mx-auto  w-full w-max-[1260px] bg-notebook-section bg-cover rounded-[42px]">
@@ -48,19 +37,16 @@ export const NotebookSection = () => {
 					<div
 						id="sobre"
 						className="titleBox flex flex-col items-center gap-4">
-						<Image
-							ref={elementoRef}
-							src={tabletImage}
-							alt="Table com sistema PMS"
-							className="notebookImage sm:-mt-[300px] -mt-[180px] sm:w-2/3 w-full -ml-4 sm:ml-0"
-						/>
+						<TabletMainImage />
 
 						<h2 className="sm:text-5xl md:text-4xl text-3xl text-[#272727] font-bold text-center">
 							PMS (Process Management System)
 						</h2>
 
 						<div className="cardContainer w-11/12 md:w-11/12 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-1">
-							<Card className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card
+								ref={cardRef.card1}
+								className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Único</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -69,7 +55,9 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card
+								ref={cardRef.card2}
+								className=" bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Facilidade</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -78,7 +66,9 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card
+								ref={cardRef.card3}
+								className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Planejamento</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
@@ -87,7 +77,9 @@ export const NotebookSection = () => {
 									</CardDescription>
 								</CardContent>
 							</Card>
-							<Card className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
+							<Card
+								ref={cardRef.card4}
+								className="flex-1 bg-gradient-to-tr from-[#232528] to-[#3C4047]  pt-7 pb-2 px-0 text-center shadow-sm ">
 								<CardTitle className="mb-3 text-2xl">Análises</CardTitle>
 								<CardContent className="text-sm">
 									<CardDescription className="text-white">
